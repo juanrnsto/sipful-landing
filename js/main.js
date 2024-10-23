@@ -12,7 +12,7 @@ $(document).ready(function() {
             body: new URLSearchParams(new FormData(form)).toString()
         })
         .then(() => {
-            // Add fade-out class to initiate transition
+            // Fade out existing content
             $('.signup-text, form').addClass('fade-out');
             
             // Wait for fade out to complete
@@ -20,8 +20,14 @@ $(document).ready(function() {
                 // Hide the form and text
                 $('.signup-text, form').hide();
                 
-                // Show and fade in success message
-                $('.success-message').css('display', 'block');
+                // Show success message with animation
+                $('.success-message').css({
+                    'display': 'block',
+                    'transform': 'translateY(20px)',
+                    'opacity': '0'
+                });
+                
+                // Trigger the animation
                 setTimeout(() => {
                     $('.success-message').addClass('fade-in');
                 }, 50);
