@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    feather.replace();
     
     $('#signup-form').on('submit', function(e) {
         e.preventDefault();

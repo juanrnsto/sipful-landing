@@ -66,22 +66,43 @@ body {
 }
 
 .social-icons a {
-    color: #2572FF;
     text-decoration: none;
     transition: opacity 0.3s;
     padding: 0.5rem;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.social-icons a:hover, 
-.social-icons a:focus {
+.social-icons a:hover {
     opacity: 0.8;
+}
+
+.social-icons a:focus {
     outline: 3px solid var(--focus-ring-color);
 }
 
-.social-icons i {
+.social-icons svg {
     width: 24px;
     height: 24px;
+}
+
+/* Brand colors */
+.instagram-icon {
+    fill: #E4405F;
+}
+
+.facebook-icon {
+    fill: #1877F2;
+}
+
+.threads-icon {
+    fill: #000000;
+}
+
+.whatsapp-icon {
+    fill: #25D366;
 }
 
 .form-container {
