@@ -12,10 +12,20 @@ $(document).ready(function() {
             body: new URLSearchParams(new FormData(form)).toString()
         })
         .then(() => {
-            // Fade out both the signup text and form
-            $('.signup-text').fadeOut();
-            $(form).fadeOut();
-            $('.success-message').fadeIn().focus();
+            // Add fade-out class to initiate transition
+            $('.signup-text, form').addClass('fade-out');
+            
+            // Wait for fade out to complete
+            setTimeout(() => {
+                // Hide the form and text
+                $('.signup-text, form').hide();
+                
+                // Show and fade in success message
+                $('.success-message').css('display', 'block');
+                setTimeout(() => {
+                    $('.success-message').addClass('fade-in');
+                }, 50);
+            }, 500);
         })
         .catch((error) => alert('Error submitting form. Please try again.'));
     });
