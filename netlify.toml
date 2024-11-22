@@ -1,0 +1,15 @@
+[build]
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/qr"
+  to = "/.netlify/functions/redirect"
+  status = 200
+  force = true
+  query = { source = ":source" }
+
+[[redirects]]
+  from = "/qr/*"
+  to = "/.netlify/functions/redirect"
+  status = 200
+  force = true
