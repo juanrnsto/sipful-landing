@@ -1,4 +1,3 @@
-javascript
 const redirectConfig = {
   // Default redirect if no specific mapping is found
   default: 'https://haveasipful.com',
