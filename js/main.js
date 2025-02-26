@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    // Load latest YouTube video from juanrnsto channel
-    loadLatestYouTubeVideo();
     
     // Form submission handling
     $('#signup-form').on('submit', function(e) {
