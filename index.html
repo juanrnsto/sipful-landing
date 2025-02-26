@@ -53,21 +53,12 @@
             </a>
         </nav>
 
-        <!-- Replace the current video container div with this -->
         <div class="latest-update">
             <h3>Latest Sipful Update</h3>
         </div>
-        <div class="video-container">
-            <!-- Direct embed of a specific video - replace the videoId with your own -->
-            <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/KTlwY9_5_0UM" 
-                title="Latest Sipful Update" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+        <div class="video-container" id="youtube-latest-video">
+            <!-- YouTube video will be loaded here via JavaScript -->
+            <div class="video-placeholder">Loading latest update...</div>
         </div>
 
         <div class="signup-text">
