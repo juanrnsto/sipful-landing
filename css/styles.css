@@ -25,7 +25,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;  /* Increased from 400px to accommodate video */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -37,6 +37,55 @@ body {
     width: 100px;
     height: 100px;
     margin: 0;
+}
+
+/* Latest update title */
+.latest-update {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.latest-update h3 {
+    font-size: 1.5rem;
+    color: #2572FF;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Video container styles */
+.video-container {
+    width: 100%;
+    margin: 0.5rem 0 1rem 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2572FF;
+    font-weight: bold;
 }
 
 .signup-text {
@@ -97,8 +146,8 @@ body {
     fill: #1877F2;
 }
 
-.threads-icon {
-    fill: #000000;
+.youtube-icon {
+    fill: #FF0000;
 }
 
 .whatsapp-icon {
@@ -217,7 +266,7 @@ button:focus {
 
 @media (min-width: 768px) {
     .container {
-        max-width: 500px;
+        max-width: 640px;  /* Increased from 500px to better accommodate video */
     }
     
     .logo {
